@@ -1,7 +1,10 @@
-// Arrange routes
-
+import Home from './pages/Home'
 function App() {
-  return <div className="h-screen w-full bg-black">hi</div>;
+  return (
+    <>
+      <Home/>
+    </>
+  );
 }
 
 export default App;
