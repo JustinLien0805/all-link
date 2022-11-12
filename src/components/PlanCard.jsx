@@ -15,7 +15,7 @@ const PlanCard = ({ title, description, small, large }) => {
         <Lightbox
           small={small}
           large={large}
-          alt="plan"
+          alt={title}
           className="w-72 h-64 object-cover"
           onClose={() => {
             setIsOpen(false);
@@ -26,7 +26,7 @@ const PlanCard = ({ title, description, small, large }) => {
         <img src={small} alt="plan" className="w-72 h-64 object-cover" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{title}</h2>
+        <h2 className="card-title text-teal-500">{title}</h2>
         <p>{description}</p>
         <div className="card-actions justify-end mt-4">
           <button className="btn bg-teal-500 text-black hover:bg-teal-800 hover:text-white" onClick={() => setIsOpen(true)}>

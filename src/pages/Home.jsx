@@ -9,9 +9,8 @@ import HomeAboutUs from "../components/HomeAboutUs";
 const Home = () => {
   return (
     <div className="flex flex-col h-screen w-full bg-black relative overflow-y-scroll overflow-x-hidden">
-      <NavBar />
       <Hero />
-      <div className="absolute bottom-[10vh] left-0 w-full overflow-hidden bg-neutral-100">
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-neutral-100">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +25,7 @@ const Home = () => {
         </svg>
       </div>
 
-      <div className="absolute flex flex-col items-center bg-neutral-100 w-full top-[90vh]">
+      <div className="absolute flex flex-col items-center bg-neutral-100 w-full top-[100vh]">
         <FadeInLayout title="產品特色">
           <HomeFeature />
         </FadeInLayout>
