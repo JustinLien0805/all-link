@@ -6,7 +6,7 @@ import HomeFeature from "../components/HomeFeature";
 
 const Home = () => {
   return (
-    <div className="flex flex-col h-screen w-full bg-black relative overflow-y-scroll">
+    <div className="flex flex-col h-screen w-full bg-black relative overflow-y-scroll overflow-x-hidden">
       <NavBar />
       <Hero />
       <div class="absolute bottom-[10vh] left-0 w-full overflow-hidden bg-white">

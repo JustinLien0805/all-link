@@ -4,7 +4,7 @@ const NavBar = () => {
   return (
     <div
       className="flex items-center space-x-4 w-full h-20 z-20 lg:px-36 md:px-16 px-8 bg-black text-white
-     font-bold lg:text-lg sm:text-sm"
+     font-bold lg:text-lg sm:text-sm fixed "
     >
       <button className="mr-auto text-lg">ALl-LINK</button>
       {[
