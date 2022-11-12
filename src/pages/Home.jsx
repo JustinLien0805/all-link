@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import HomeFeature from "../components/HomeFeature";
-
+import PlanCard from "../components/PlanCard";
 const Home = () => {
   return (
     <div className="flex flex-col h-screen w-full bg-black relative overflow-y-scroll overflow-x-hidden">
@@ -24,8 +24,9 @@ const Home = () => {
         </svg>
       </div>
 
-      <div className="absolute flex flex-col items-center bg-white w-full h-screen top-[90vh]">
+      <div className="absolute flex flex-col items-center bg-white w-full h-[200vh] top-[90vh]">
         <HomeFeature />
+        <PlanCard />
         <Footer />
       </div>
     </div>
