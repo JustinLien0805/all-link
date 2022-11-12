@@ -20,7 +20,7 @@ const FadeInLayout = ({ children, title }) => {
   }, [control, inView]);
   return (
     <motion.div
-      className="flex flex-col items-center mt-20"
+      className="flex flex-col items-center my-20 w-full px-36"
       ref={ref}
       variants={variant}
       initial="hidden"

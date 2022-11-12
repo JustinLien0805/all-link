@@ -4,12 +4,14 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import HomeFeature from "../components/HomeFeature";
 import PlanCard from "../components/PlanCard";
+import FadeInLayout from "../components/FadeInLayout";
+import HomeAboutUs from "../components/HomeAboutUs";
 const Home = () => {
   return (
     <div className="flex flex-col h-screen w-full bg-black relative overflow-y-scroll overflow-x-hidden">
       <NavBar />
       <Hero />
-      <div class="absolute bottom-[10vh] left-0 w-full overflow-hidden bg-white">
+      <div className="absolute bottom-[10vh] left-0 w-full overflow-hidden bg-neutral-100">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +26,14 @@ const Home = () => {
         </svg>
       </div>
 
-      <div className="absolute flex flex-col items-center bg-white w-full h-[200vh] top-[90vh]">
-        <HomeFeature />
-        <PlanCard />
+      <div className="absolute flex flex-col items-center bg-neutral-100 w-full top-[90vh]">
+        <FadeInLayout title="產品特色">
+          <HomeFeature />
+        </FadeInLayout>
+        <FadeInLayout title="產品方案">
+          <PlanCard />
+        </FadeInLayout>
+        <HomeAboutUs />
         <Footer />
       </div>
     </div>
