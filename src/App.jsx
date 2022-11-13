@@ -6,7 +6,7 @@ import Download from "./pages/Download";
 import ContactUs from "./pages/ContactUs";
 import Product from "./pages/Product";
 import Specification from "./pages/Specification";
-
+import Document from "./pages/Document";
 function App() {
   return (
     <div className="flex flex-col h-screen w-full bg-black relative overflow-y-scroll overflow-x-hidden">
@@ -18,6 +18,7 @@ function App() {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/product" element={<Product />} />
         <Route path="/specification" element={<Specification />} />
+        <Route path="/document" element={<Document />} />
       </Routes>
     </div>
   );
