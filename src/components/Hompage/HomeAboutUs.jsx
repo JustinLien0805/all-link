@@ -33,7 +33,7 @@ const HomeAboutUs = () => {
       </h2>
       <div className="flex flex-col justify-start items-start w-full h-full  space-y-8 z-10">
         <h2 className="text-5xl font-bold">關於我們</h2>
-        <p className="text-2xl font-bold w-2/3 border-l-4 pl-4 border-teal-500">
+        <p className="text-2xl w-2/3 border-l-4 pl-4 border-teal-500">
           歐林克科技是由一群在信息界/工業界，擁有數十年實務經驗的精英組成的團隊，
           歐林克竭力將AIOT操作變得簡單，無需大投資也無需特別訓練，它就像使用ROUTER路由器一樣上手，
           物聯通就是用您的手機隨時掌握遠方設備訊息的瑞士刀

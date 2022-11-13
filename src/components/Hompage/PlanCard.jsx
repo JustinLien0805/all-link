@@ -1,10 +1,10 @@
 import { useState } from "react";
-import plan1 from "../assets/plan1.jpeg";
-import plan2 from "../assets/plan2.jpeg";
-import plan3 from "../assets/plan3.jpeg";
-import demo1 from "../assets/plan1Demo.png";
-import demo2 from "../assets/plan2Demo.png";
-import demo3 from "../assets/plan3Demo.png";
+import plan1 from "../../assets/plan1.jpeg";
+import plan2 from "../../assets/plan2.jpeg";
+import plan3 from "../../assets/plan3.jpeg";
+import demo1 from "../../assets/plan1Demo.png";
+import demo2 from "../../assets/plan2Demo.png";
+import demo3 from "../../assets/plan3Demo.png";
 import { Lightbox } from "react-modal-image";
 const PlanCard = ({ title, description, small, large }) => {
   const [isOpen, setIsOpen] = useState(false);

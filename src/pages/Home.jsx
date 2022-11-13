@@ -1,11 +1,11 @@
 import React from "react";
-import Hero from "../components/Hero";
+import Hero from "../components/Hompage/Hero";
 import Footer from "../components/Footer";
-import HomeFeature from "../components/HomeFeature";
-import PlanCard from "../components/PlanCard";
-import FadeInLayout from "../components/FadeInLayout";
-import HomeAboutUs from "../components/HomeAboutUs";
-import HomeContactUs from "../components/HomeContactUs";
+import HomeFeature from "../components/Hompage/HomeFeature";
+import PlanCard from "../components/Hompage/PlanCard";
+import FadeInLayout from "../components/Hompage/FadeInLayout";
+import HomeAboutUs from "../components/Hompage/HomeAboutUs";
+import HomeContactUs from "../components/Hompage/HomeContactUs";
 const Home = () => {
   return (
     <>

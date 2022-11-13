@@ -1,5 +1,5 @@
 import React from "react";
-import demo from "../assets/demo.mp4";
+import demo from "../../assets/demo.mp4";
 const Hero = () => {
   return (
     <div className="flex lg:flex-row flex-col justify-center md:items-start items-center lg:px-36 md:px-16 mt-64 z-10">
