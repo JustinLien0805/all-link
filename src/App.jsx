@@ -9,7 +9,7 @@ import Specification from "./pages/Specification";
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col h-screen w-full bg-black relative overflow-y-scroll overflow-x-hidden">
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -19,7 +19,7 @@ function App() {
         <Route path="/product" element={<Product />} />
         <Route path="/specification" element={<Specification />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

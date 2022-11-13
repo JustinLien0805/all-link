@@ -1,14 +1,14 @@
 import React from "react";
-import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import HomeFeature from "../components/HomeFeature";
 import PlanCard from "../components/PlanCard";
 import FadeInLayout from "../components/FadeInLayout";
 import HomeAboutUs from "../components/HomeAboutUs";
+import HomeContactUs from "../components/HomeContactUs";
 const Home = () => {
   return (
-    <div className="flex flex-col h-screen w-full bg-black relative overflow-y-scroll overflow-x-hidden">
+    <>
       <Hero />
       <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-neutral-100">
         <svg
@@ -33,9 +33,10 @@ const Home = () => {
           <PlanCard />
         </FadeInLayout>
         <HomeAboutUs />
+        <HomeContactUs />
         <Footer />
       </div>
-    </div>
+    </>
   );
 };
 

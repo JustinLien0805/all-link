@@ -7,12 +7,11 @@ const Hero = () => {
         <h1 className="text-6xl font-bold mb-12 w-84">
           Use <span className="text-teal-500">AIOT</span> to solve your problem
         </h1>
-        <p className="text-lg font-light text-gray-400 w-[28rem] border-l-4 pl-4">
+        <p className="text-lg font-light text-gray-400 w-[28rem] border-l-4 pl-4 border-teal-500">
           All-Link is a new generation of smart home products, which can be used
           to control the home appliances through the mobile phone APP
         </p>
       </div>
-
       <video src={demo} className="lg:w-[36rem] w-[28rem] " controls />
     </div>
   );
