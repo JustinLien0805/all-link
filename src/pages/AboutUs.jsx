@@ -3,13 +3,13 @@ import Footer from "../components/Footer";
 const AboutUs = () => {
   return (
     <div className="w-screen flex flex-col">
-      <div className="flex w-full h-full py-20 px-36 mt-20 relative text-black bg-white">
+      <div className="flex w-full h-full py-20 px-36 mt-20 relative text-black bg-[#B4BFB7]">
         {/* watermark */}
         {/* <h2 className="absolute -left-10 -top-10 text-[18rem] font-bold opacity-[0.1]">
           About Us
         </h2> */}
         <div className="flex flex-col justify-start items-start w-full h-full  space-y-8 z-10">
-          <h2 className="text-5xl font-bold border-l-4 pl-4 border-teal-500">
+          <h2 className="text-5xl font-bold border-l-4 pl-4 border-[#005C7C]">
             關於我們
           </h2>
           <div className="text-xl opacity-80">

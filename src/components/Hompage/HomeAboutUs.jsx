@@ -21,7 +21,7 @@ const HomeAboutUs = () => {
   }, [control, inView]);
   return (
     <motion.div
-      className="flex w-full py-40 px-36 my-20 relative text-white bg-black"
+      className="flex w-full py-40 px-36 my-20 relative text-white bg-[#28302A]"
       ref={ref}
       variants={variant}
       initial="hidden"

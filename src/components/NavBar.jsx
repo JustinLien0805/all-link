@@ -13,10 +13,10 @@ const NavBar = () => {
   return (
     <div
       className="flex items-center space-x-4 w-full h-20 z-20 lg:px-36 md:px-16 px-8 
-      bg-black/90 text-white font-mono lg:text-lg sm:text-sm fixed backdrop-blur-sm"
+      bg-[#28302A] text-white font-mono lg:text-lg sm:text-sm fixed border-b-[0.5px] border-black/30"
     >
       <button
-        className="mr-auto text-2xl font-bold text-teal-500"
+        className="mr-auto text-3xl font-bold text-teal-500"
         onClick={() => {
           navigate("/");
           setOnSelectedPage("/");
@@ -98,8 +98,8 @@ const NavBtn = ({
       <div className="dropdown dropdown-hover">
         <label
           tabIndex={0}
-          className={`cursor-pointer rounded-lg px-4 py-3 hidden hover:bg-neutral-800 sm:block ${
-            nav == onSelectedPage ? "text-teal-500" : ""
+          className={`cursor-pointer rounded-lg px-4 py-3 hidden hover:text-teal-500 sm:block ${
+            nav == onSelectedPage ? "border-teal-500 rounded-none border-b-4" : ""
           }`}
           onClick={() => {
             navigate(nav);
@@ -111,11 +111,11 @@ const NavBtn = ({
         {subpage?.length > 0 && (
           <ul
             tabIndex={0}
-            className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content menu p-2 bg-[#69736c] rounded-box w-52 shadow-lg"
           >
             {subpage?.map((subpage, index) => (
-              <li key={index} className="hover:text-teal-500">
-                <a className="active:bg-teal-500">{subpage}</a>
+              <li key={index} className="hover:text-teal-500 text-white">
+                <a className="active:bg-teal-500 hover:bg-[#28302A]">{subpage}</a>
               </li>
             ))}
           </ul>

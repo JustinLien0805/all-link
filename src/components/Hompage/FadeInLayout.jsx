@@ -29,7 +29,7 @@ const FadeInLayout = ({ children, title }) => {
       <h2 className="text-5xl text-center text-black font-bold mb-8">
         {title}
       </h2>
-      <div className="border-t-4 border-teal-500 mb-12 w-12" />
+      <div className="border-t-4 border-[#005C7C] mb-12 w-12" />
       {children}
     </motion.div>
   );

@@ -10,26 +10,28 @@ const PlanCard = ({ title, description, small, large }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="card w-72 bg-black text-white shadow-xl">
+    <div className="card w-[22rem] bg-[#28302A] text-white">
       {isOpen && (
         <Lightbox
           small={small}
           large={large}
           alt={title}
-          className="w-72 h-64 object-cover"
           onClose={() => {
             setIsOpen(false);
           }}
         />
       )}
       <figure className="cursor-pointer" onClick={() => setIsOpen(true)}>
-        <img src={small} alt="plan" className="w-72 h-64 object-cover" />
+        <img src={small} alt="plan" className="w-[22rem] h-72 object-cover opacity-80" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title text-teal-500">{title}</h2>
+        <h2 className="card-title">{title}</h2>
         <p>{description}</p>
         <div className="card-actions justify-end mt-4">
-          <button className="btn bg-teal-500 text-black hover:bg-teal-800 hover:text-white" onClick={() => setIsOpen(true)}>
+          <button
+            className="btn btn-outline border-teal-500 text-white hover:border-teal-500 hover:bg-teal-500"
+            onClick={() => setIsOpen(true)}
+          >
             Show Detail
           </button>
         </div>
@@ -40,22 +42,22 @@ const PlanCard = ({ title, description, small, large }) => {
 
 const PlanList = () => {
   return (
-    <div className="flex flex-row flex-wrap justify-center space-x-12">
+    <div className="flex flex-row flex-wrap justify-center space-x-8">
       <PlanCard
         title="單機版"
-        description="方案一的描述"
+        description="手機 <==> 物聯通"
         small={plan1}
         large={demo1}
       />
       <PlanCard
         title="內網版"
-        description="方案二的描述"
+        description="手機 <==> Router <==> 物聯通"
         small={plan2}
         large={demo2}
       />
       <PlanCard
         title="雲端版"
-        description="方案三的描述"
+        description="手機 <==> Router <==> 雲端 <==>物聯通"
         small={plan3}
         large={demo3}
       />
