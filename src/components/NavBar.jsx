@@ -51,7 +51,12 @@ const NavBar = () => {
         nav="/specification"
         setOnSelectedPage={setOnSelectedPage}
         onSelectedPage={onSelectedPage}
-        // subpage={["規格表", "訂貨索引表", "操作面板說明", "安裝與固定"]}
+        subpage={[
+          { name: "規格表", url: "/specification" },
+          { name: "訂貨索引表", url: "/specification/orderIndex" },
+          { name: "操作面板說明", url: "/specification/panelExplanation" },
+          { name: "安裝與固定", url: "/specification/installation" },
+        ]}
       />
       <NavBtn
         name="下載"
@@ -123,7 +128,6 @@ const NavBtn = ({
                 key={index}
                 className="hover:text-teal-500 text-white"
                 onClick={() => {
-                  console.log(subpage.url);
                   navigate(subpage.url);
                   setOnSelectedPage(nav);
                 }}

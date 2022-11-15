@@ -1,21 +1,28 @@
-import React from "react";
-import overview from "../../assets/productOverview.jpeg";
-import Footer from "../../components/Footer";
+import { useEffect, useState } from "react";
+import PageLayout from "../../components/PageLayout";
+import { useLocation } from "react-router-dom";
+import overview from "./img/productOverview.jpeg";
+import feature from "./img/productFeature.jpeg";
 const Product = () => {
-  return (
-    <>
-      <div className="w-screen flex flex-col bg-[#B4BFB7]">
-        <div className="w-full flex flex-col justify-center items-center py-40">
-          <h2 className="text-5xl text-center text-black font-bold mb-8">
-            產品概要
-          </h2>
-          <div className="border-t-4 border-[#005C7C] mb-12 w-12" />
-          <img src={overview} alt="overview" className="w-2/3" />
-        </div>
-        <Footer />
-      </div>
-    </>
-  );
+  const [name, setName] = useState("");
+  const [img, setImg] = useState("");
+
+  const location = useLocation();
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/product":
+        setName("產品概要");
+        setImg(overview);
+        break;
+      case "/product/feature":
+        setName("產品特色");
+        setImg(feature);
+        break;
+      default:
+        break;
+    }
+  }, [location.pathname]);
+  return <PageLayout name={name} img={img} />;
 };
 
 export default Product;

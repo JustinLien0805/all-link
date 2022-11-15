@@ -7,7 +7,7 @@ import ContactUs from "./pages/ContactUs";
 import Product from "./pages/Product/Product";
 import Specification from "./pages/Specification/Specification";
 import Document from "./pages/Document/Document";
-import ProductFeature from "./pages/Product/ProductFeature";
+
 function App() {
   return (
     <div className="flex flex-col h-screen w-full bg-[#28302A] relative overflow-y-scroll overflow-x-hidden">
@@ -16,8 +16,15 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/product" element={<Product />} />
-        <Route path="/product/feature" element={<ProductFeature />} />
+        <Route path="/product/feature" element={<Product />} />
         <Route path="/specification" element={<Specification />} />
+        <Route path="/specification/orderIndex" element={<Specification />} />
+        <Route
+          path="/specification/panelExplanation"
+          element={<Specification />}
+        />
+        <Route path="/specification/installation" element={<Specification />} />
+
         <Route path="/document" element={<Document />}></Route>
         <Route path="/download" element={<Download />}></Route>
         <Route path="/contactUs" element={<ContactUs />} />
