@@ -7,7 +7,9 @@ import ContactUs from "./pages/ContactUs";
 import Product from "./pages/Product/Product";
 import Specification from "./pages/Specification/Specification";
 import Document from "./pages/Document/Document";
-
+import TerminalWiring from "./pages/Document/TerminalWiring";
+import HardwareWiring from "./pages/Document/HardwareWiring";
+import ModeExplanation from "./pages/Download/ModeExplanation";
 function App() {
   return (
     <div className="flex flex-col h-screen w-full bg-[#28302A] relative overflow-y-scroll overflow-x-hidden">
@@ -24,9 +26,11 @@ function App() {
           element={<Specification />}
         />
         <Route path="/specification/installation" element={<Specification />} />
-
-        <Route path="/document" element={<Document />}></Route>
-        <Route path="/download" element={<Download />}></Route>
+        <Route path="/download" element={<Download />} />
+        <Route path="/download/modeExplanation" element={<ModeExplanation />} />
+        <Route path="/document" element={<Document />} />
+        <Route path="/document/terminalWiring" element={<TerminalWiring />} />
+        <Route path="/document/hardwareWiring" element={<HardwareWiring />} />
         <Route path="/contactUs" element={<ContactUs />} />
         <Route
           path="*"

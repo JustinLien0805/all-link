@@ -1,3 +1,5 @@
+// Page layout for Product and Specification pages
+
 import React from "react";
 import Footer from "./Footer";
 const PageLayout = ({ name, img }) => {

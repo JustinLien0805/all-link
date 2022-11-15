@@ -63,25 +63,25 @@ const NavBar = () => {
         nav="/download"
         setOnSelectedPage={setOnSelectedPage}
         onSelectedPage={onSelectedPage}
-        // subpage={[
-        //   "WiFi版_apk",
-        //   "Internet版_apk",
-        //   "操作模式解說",
-        //   "传感器单位换算",
-        // ]}
+        subpage={[
+          //   "WiFi版_apk",
+          //   "Internet版_apk",
+          { name: "操作模式解說", url: "/download/modeExplanation" },
+          //   "传感器单位换算",
+        ]}
       />
       <NavBtn
         name="操作應用"
         nav="/document"
         setOnSelectedPage={setOnSelectedPage}
         onSelectedPage={onSelectedPage}
-        // subpage={[
-        //   "技术解说",
-        //   "硬件操作篇",
-        //   "APP操作篇",
-        //   "端子接线图",
-        //   "實体接線圖",
-        // ]}
+        subpage={[
+          { name: "如何選型", url: "/document" },
+          { name: "端子接線圖", url: "/document/terminalWiring" },
+          { name: "實体接線圖", url: "/document/hardwareWiring" },
+          // "硬件操作篇",
+          // "APP操作篇",
+        ]}
       />
       <NavBtn
         name="聯絡我們"
