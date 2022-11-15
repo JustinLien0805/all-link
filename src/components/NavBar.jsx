@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <div
       className="flex items-center space-x-4 w-full h-20 z-20 lg:px-36 md:px-16 px-8 
-      bg-[#28302A] text-white font-mono lg:text-lg sm:text-sm fixed border-b-[0.5px] border-black/30"
+      bg-[#28302A] text-white font-mono lg:text-lg sm:text-sm fixed shadow-md"
     >
       <button
         className="mr-auto text-3xl font-bold text-teal-500"
@@ -41,39 +41,42 @@ const NavBar = () => {
         nav="/product"
         setOnSelectedPage={setOnSelectedPage}
         onSelectedPage={onSelectedPage}
-        subpage={["產品概要", "產品特色"]}
+        subpage={[
+          { name: "產品概要", url: "/product" },
+          { name: "產品特色", url: "/product/feature" },
+        ]}
       />
       <NavBtn
         name="產品規格"
         nav="/specification"
         setOnSelectedPage={setOnSelectedPage}
         onSelectedPage={onSelectedPage}
-        subpage={["規格表", "訂貨索引表", "操作面板說明", "安裝與固定"]}
+        // subpage={["規格表", "訂貨索引表", "操作面板說明", "安裝與固定"]}
       />
       <NavBtn
         name="下載"
         nav="/download"
         setOnSelectedPage={setOnSelectedPage}
         onSelectedPage={onSelectedPage}
-        subpage={[
-          "WiFi版_apk",
-          "Internet版_apk",
-          "操作模式解說",
-          "传感器单位换算",
-        ]}
+        // subpage={[
+        //   "WiFi版_apk",
+        //   "Internet版_apk",
+        //   "操作模式解說",
+        //   "传感器单位换算",
+        // ]}
       />
       <NavBtn
         name="操作應用"
         nav="/document"
         setOnSelectedPage={setOnSelectedPage}
         onSelectedPage={onSelectedPage}
-        subpage={[
-          "技术解说",
-          "硬件操作篇",
-          "APP操作篇",
-          "端子接线图",
-          "實体接線圖",
-        ]}
+        // subpage={[
+        //   "技术解说",
+        //   "硬件操作篇",
+        //   "APP操作篇",
+        //   "端子接线图",
+        //   "實体接線圖",
+        // ]}
       />
       <NavBtn
         name="聯絡我們"
@@ -99,7 +102,9 @@ const NavBtn = ({
         <label
           tabIndex={0}
           className={`cursor-pointer rounded-lg px-4 py-3 hidden hover:text-teal-500 sm:block ${
-            nav == onSelectedPage ? "border-teal-500 rounded-none border-b-4" : ""
+            nav == onSelectedPage
+              ? "border-teal-500 rounded-none border-b-4"
+              : ""
           }`}
           onClick={() => {
             navigate(nav);
@@ -114,8 +119,18 @@ const NavBtn = ({
             className="dropdown-content menu p-2 bg-[#69736c] rounded-box w-52 shadow-lg"
           >
             {subpage?.map((subpage, index) => (
-              <li key={index} className="hover:text-teal-500 text-white">
-                <a className="active:bg-teal-500 hover:bg-[#28302A]">{subpage}</a>
+              <li
+                key={index}
+                className="hover:text-teal-500 text-white"
+                onClick={() => {
+                  console.log(subpage.url);
+                  navigate(subpage.url);
+                  setOnSelectedPage(nav);
+                }}
+              >
+                <a className="active:bg-teal-500 hover:bg-[#28302A]">
+                  {subpage.name}
+                </a>
               </li>
             ))}
           </ul>

@@ -27,7 +27,7 @@ const PlanCard = ({ title, description, small, large }) => {
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{description}</p>
-        <div className="card-actions justify-end mt-4">
+        <div className="card-actions justify-start mt-4">
           <button
             className="btn btn-outline border-teal-500 text-white hover:border-teal-500 hover:bg-teal-500"
             onClick={() => setIsOpen(true)}

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex lg:flex-row flex-col justify-center items-center lg:px-36 md:px-16 mt-40 z-10">
+    <div className="flex lg:flex-row flex-col justify-center items-center bg-[#28302A] lg:px-36 md:px-16 pt-52 z-10">
       <div className="flex flex-col text-center lg:text-left text-white lg:mr-6 px-4 lg:px-0 mb-8 space-y-8">
         <h1 className="text-7xl font-bold w-84">
           Use <span className="text-teal-500">AIOT</span> to solve your problem
@@ -14,7 +14,7 @@ const Hero = () => {
           to control the home appliances through the mobile phone APP
         </p>
         <button
-          className="btn btn-outline w-40 border-teal-500 text-lg text-white hover:bg-teal-500 hover:border-teal-500"
+          className="btn btn-outline w-40 border-teal-500 text-lg text-white hover:text-[#28302A] hover:bg-teal-500 hover:border-teal-500"
           onClick={() => navigate("/contactUs")}
         >
           聯絡我們

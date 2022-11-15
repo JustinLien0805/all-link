@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 // fade in animation
 const variant = {
-  visible: { opacity: 1, transition: { duration: 0.8 } },
+  visible: { opacity: 1, transition: { duration: 0.3 } },
   hidden: { opacity: 0 },
 };
 const FadeInLayout = ({ children, title }) => {

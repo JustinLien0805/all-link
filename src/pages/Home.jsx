@@ -24,7 +24,6 @@ const Home = () => {
           ></path>
         </svg>
       </div>
-
       <div className="absolute flex flex-col items-center bg-[#b4bfb7] w-full top-[100vh]">
         <FadeInLayout title="產品特色">
           <HomeFeature />
