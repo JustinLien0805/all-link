@@ -79,7 +79,7 @@ const NavBar = () => {
           { name: "如何選型", url: "/document" },
           { name: "端子接線圖", url: "/document/terminalWiring" },
           { name: "實体接線圖", url: "/document/hardwareWiring" },
-          // "硬件操作篇",
+          { name: "硬件操作篇", url: "/document/hardwareOperating" },
           // "APP操作篇",
         ]}
       />
@@ -126,7 +126,7 @@ const NavBtn = ({
             {subpage?.map((subpage, index) => (
               <li
                 key={index}
-                className="hover:text-teal-500 text-white"
+                className="text-white"
                 onClick={() => {
                   navigate(subpage.url);
                   setOnSelectedPage(nav);

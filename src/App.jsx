@@ -10,6 +10,7 @@ import Document from "./pages/Document/Document";
 import TerminalWiring from "./pages/Document/TerminalWiring";
 import HardwareWiring from "./pages/Document/HardwareWiring";
 import ModeExplanation from "./pages/Download/ModeExplanation";
+import HardwareOperating from "./pages/Document/HardwareOperating";
 function App() {
   return (
     <div className="flex flex-col h-screen w-full bg-[#28302A] relative overflow-y-scroll overflow-x-hidden">
@@ -29,6 +30,10 @@ function App() {
         <Route path="/download" element={<Download />} />
         <Route path="/download/modeExplanation" element={<ModeExplanation />} />
         <Route path="/document" element={<Document />} />
+        <Route
+          path="/document/hardwareOperating"
+          element={<HardwareOperating />}
+        />
         <Route path="/document/terminalWiring" element={<TerminalWiring />} />
         <Route path="/document/hardwareWiring" element={<HardwareWiring />} />
         <Route path="/contactUs" element={<ContactUs />} />
