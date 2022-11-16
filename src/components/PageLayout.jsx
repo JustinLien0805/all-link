@@ -5,7 +5,7 @@ import Footer from "./Footer";
 const PageLayout = ({ name, img }) => {
   return (
     <div className="w-screen flex flex-col bg-[#B4BFB7]">
-      <div className="w-full flex flex-col justify-center items-center py-40">
+      <div className="w-full flex flex-col justify-center items-center py-20">
         <h2 className="text-5xl text-center text-black font-bold mb-8">
           {name}
         </h2>

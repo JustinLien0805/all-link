@@ -22,7 +22,11 @@ const PlanCard = ({ title, description, small, large }) => {
         />
       )}
       <figure className="cursor-pointer" onClick={() => setIsOpen(true)}>
-        <img src={small} alt="plan" className="w-[22rem] h-72 object-cover opacity-80" />
+        <img
+          src={small}
+          alt="plan"
+          className="w-[22rem] h-72 object-cover opacity-80"
+        />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
@@ -42,7 +46,7 @@ const PlanCard = ({ title, description, small, large }) => {
 
 const PlanList = () => {
   return (
-    <div className="flex flex-row flex-wrap justify-center space-x-8">
+    <div className="flex flex-col md:flex-row space-y-4 md:space-x-12 text-black scale-90 lg:scale-100">
       <PlanCard
         title="單機版"
         description="手機 <==> 物聯通"

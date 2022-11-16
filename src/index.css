@@ -3,3 +3,7 @@
 @tailwind utilities;
 /* bg: #B4BFB7 element: #005C7C text: black */
 /* bg: #28302A elemet: teal-500 text: white */
+body, html{
+    margin: 0;
+    padding: 0;
+}
