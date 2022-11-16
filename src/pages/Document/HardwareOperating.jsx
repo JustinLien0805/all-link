@@ -1,12 +1,20 @@
-import React from "react";
+import { useState } from "react";
 import Footer from "../../components/Footer";
 import hardwareSwitch from "./img/hardwareSwitch.jpeg";
 import { CiRouter } from "react-icons/ci";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { IoPhonePortraitOutline, IoSettingsOutline } from "react-icons/io5";
-
 import { MdOutlineRestartAlt } from "react-icons/md";
+import v1 from "./video/v1.mp4";
+import v2 from "./video/v2.mp4";
+import v3 from "./video/v3.mp4";
+import v4 from "./video/v4.mp4";
+import v5 from "./video/v5.mp4";
+
 const HardwareOperating = () => {
+  const [showSwitch, setShowSwitch] = useState(true);
+  const [video, setVideo] = useState("");
+
   return (
     <>
       <div className="w-screen flex flex-col bg-[#B4BFB7]">
@@ -17,48 +25,105 @@ const HardwareOperating = () => {
             </h2>
 
             <ul className="menu p-4 w-52 bg-[#69736c] text-base-content rounded-lg">
-              <li>
+              <li onClick={() => setShowSwitch(true)}>
                 <a className="active:bg-teal-500 hover:bg-[#28302A] text-white">
                   開關位置
                 </a>
               </li>
-              <li>
+              <li onClick={() => setShowSwitch(false)}>
                 <a className="active:bg-teal-500 hover:bg-[#28302A] text-white">
                   OLED操作顯示
                 </a>
               </li>
             </ul>
           </div>
+          <input type="checkbox" id="modal1" className="modal-toggle z-30" />
+          <label htmlFor="modal1" className="modal cursor-pointer">
+            <label className="modal-box relative flex items-center justify-center" htmlFor="">
+              <video src={video} controls className="h-96"></video>
+            </label>
+          </label>
           <div className="flex flex-col w-full py-32 ml-8 space-y-16">
-            {/* <h2 className="text-6xl font-bold text-black">開關位置及 oled 畫面顯示說明</h2>
-          <img src={hardwareSwitch} alt="spec sheet" className="w-full" /> */}
-            <h2 className="text-6xl font-bold text-black">OLED操作顯示</h2>
-            <div className="grid grid-cols-3 grid-flow-row gap-4 font-bold text-2xl text-white">
-              <div className="grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center">
-                <IoPhonePortraitOutline className="w-20 h-20" />
-                <h3>單機版</h3>
-              </div>
-              <div className="grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center">
-                <CiRouter className="w-20 h-20" />
-                <h3>內網版</h3>
-              </div>
-              <div className="grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center">
-                <AiOutlineCloudUpload className="w-20 h-20" />
-                <h3>雲端版</h3>
-              </div>
-              <div className="grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center">
-                <IoSettingsOutline className="w-20 h-20" />
-                <h3>參數設定</h3>
-              </div>
-              <div className="grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center">
-                <MdOutlineRestartAlt className="w-20 h-20" />
-                <h3>回復出廠设定前</h3>
-              </div>
-              <div className="grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center">
-                <MdOutlineRestartAlt className="w-20 h-20" />
-                <h3>回復出廠设定後</h3>
-              </div>
-            </div>
+            {showSwitch ? (
+              <>
+                <h2 className="text-6xl font-bold text-black">
+                  開關位置及 oled 畫面顯示說明
+                </h2>
+                <img src={hardwareSwitch} alt="spec sheet" className="w-full" />
+              </>
+            ) : (
+              <>
+                <h2 className="text-6xl font-bold text-black">OLED操作顯示</h2>
+                <div className="grid grid-cols-3 grid-flow-row gap-4 font-bold text-2xl text-white">
+                  <label
+                    htmlFor="modal1"
+                    className="btn grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center
+                     hover:scale-105 cursor-pointer shadow-lg font-bold text-2xl text-white"
+                    onClick={() => {
+                      setVideo(v1);
+                    }}
+                  >
+                    <IoPhonePortraitOutline className="w-20 h-20" />
+                    <h3>單機版</h3>
+                  </label>
+                  <label
+                    htmlFor="modal1"
+                    className="btn grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center
+                     hover:scale-105 cursor-pointer shadow-lg font-bold text-2xl text-white"
+                    onClick={() => {
+                      setVideo(v2);
+                    }}
+                  >
+                    <CiRouter className="w-20 h-20" />
+                    <h3>內網版</h3>
+                  </label>
+                  <label
+                    htmlFor="modal1"
+                    className="btn grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center
+                     hover:scale-105 cursor-pointer shadow-lg font-bold text-2xl text-white"
+                    onClick={() => {
+                      setVideo(v3);
+                    }}
+                  >
+                    <AiOutlineCloudUpload className="w-20 h-20" />
+                    <h3>雲端版</h3>
+                  </label>
+                  <label
+                    htmlFor="modal1"
+                    className="btn grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center
+                     hover:scale-105 cursor-pointer shadow-lg font-bold text-2xl text-white"
+                    onClick={() => {
+                      setVideo(v4);
+                    }}
+                  >
+                    <IoSettingsOutline className="w-20 h-20" />
+                    <h3>參數設定</h3>
+                  </label>
+                  <label
+                    htmlFor="modal1"
+                    className="btn grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center
+                     hover:scale-105 cursor-pointer shadow-lg font-bold text-2xl text-white"
+                    onClick={() => {
+                      setVideo(v5);
+                    }}
+                  >
+                    <MdOutlineRestartAlt className="w-20 h-20" />
+                    <h3>回復出廠设定前</h3>
+                  </label>
+                  <label
+                    htmlFor="modal1"
+                    className="btn grow h-60 rounded-lg bg-[#28302A] flex flex-col space-y-2 items-center justify-center
+                     hover:scale-105 cursor-pointer shadow-lg font-bold text-2xl text-white"
+                    onClick={() => {
+                      setVideo(v5);
+                    }}
+                  >
+                    <MdOutlineRestartAlt className="w-20 h-20" />
+                    <h3>回復出廠设定前</h3>
+                  </label>
+                </div>
+              </>
+            )}
           </div>
         </div>
         <Footer />
