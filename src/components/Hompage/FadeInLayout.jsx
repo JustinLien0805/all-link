@@ -26,10 +26,10 @@ const FadeInLayout = ({ children, title }) => {
       initial="hidden"
       animate={control}
     >
-      <h2 className="text-5xl text-center text-black font-bold mb-8">
+      <h2 className="text-3xl md:text-5xl text-center text-black font-bold mb-8">
         {title}
       </h2>
-      <div className="border-t-4 border-[#005C7C] mb-12 w-12" />
+      <div className="border-t-4 border-[#005C7C] md:mb-12 w-12" />
       {children}
     </motion.div>
   );

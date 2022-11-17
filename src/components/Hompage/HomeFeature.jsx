@@ -2,7 +2,7 @@ import { BiLineChart, BiPlug, BiBookBookmark } from "react-icons/bi";
 
 const HomeFeature = () => {
   return (
-    <div className="flex items-center justify-center space-x-12 text-black">
+    <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 text-black scale-90 lg:scale-100">
       <div className="flex flex-col justify-start items-center w-72 h-72 space-y-2">
         <BiPlug className="h-40 w-40 text-[#005C7C]" />
         <h2 className="text-2xl font-bold ">連網</h2>

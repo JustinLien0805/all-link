@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-[#b4bfb7]">
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-[#b4bfb7] hidden sm:block">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
