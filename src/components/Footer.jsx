@@ -2,12 +2,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex items-center justify-center h-36 w-full bg-[#28302A] overflow-hidden">
-      <h2 className="text-white font-semibold sm:text-lg text-sm">
-        Copyright ©2022 <span className="text-teal-500">ALL-LINK</span>. All
-        rights reserved
-      </h2>
-    </div>
+    <footer className="footer footer-center p-4 bg-[#28302A] text-white">
+      <div>
+        <p>
+          Copyright ©2022 <span className="text-teal-500">ALL-LINK</span>. All
+          rights reserved
+        </p>
+      </div>
+    </footer>
   );
 };
 

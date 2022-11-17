@@ -3,12 +3,12 @@ import Footer from "../components/Footer";
 const AboutUs = () => {
   return (
     <div className="w-screen flex flex-col">
-      <div className="flex w-full h-full py-20 px-36 relative text-black bg-[#B4BFB7]">
+      <div className="flex w-full h-full py-40 lg:px-36 px-4 relative text-black bg-[#B4BFB7]">
         <div className="flex flex-col justify-start items-start w-full h-full space-y-8 z-10">
           <h2 className="text-5xl font-bold border-l-4 pl-4 border-[#005C7C]">
             關於我們
           </h2>
-          <div className="text-xl opacity-80 space-y-5">
+          <div className="text-lg md:text-xl opacity-80 space-y-5">
             <p>
               歐林克科技是一群在信息界、工業界 ， 擁有數十年
               實務經驗的精英組成的團隊公司設在台北

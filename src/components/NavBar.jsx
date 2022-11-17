@@ -12,7 +12,7 @@ const NavBar = ({ children }) => {
 
   return (
     <div className="drawer drawer-end">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+      <input id="drawer1" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col overflow-x-hidden">
         <div className="w-full navbar fixed z-50 bg-[#28302A] text-white">
           <div className="flex-1 px-2 mx-2">
@@ -105,7 +105,7 @@ const NavBar = ({ children }) => {
             </ul>
           </div>
           <div className="flex-none lg:hidden">
-            <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
+            <label htmlFor="drawer1" className="btn btn-square btn-ghost">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -125,8 +125,8 @@ const NavBar = ({ children }) => {
         {children}
       </div>
       <div className="drawer-side">
-        <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu p-4 w-80 bg-[#28302A]">
+        <label htmlFor="drawer1" className="drawer-overlay"></label>
+        <ul className="menu p-4 md:w-80 w-60 bg-[#28302A]">
           <NavBtn
             name="首頁"
             nav="/"
@@ -218,7 +218,7 @@ const NavBtn = ({
   return (
     <>
       <li>
-        <div className="dropdown dropdown-hover dropdown-bottom">
+        <div className="dropdown dropdown-hover dropdown-bottom active:bg-transparent rounded-lg">
           <label
             tabIndex={0}
             className={`cursor-pointer rounded-lg hover:text-teal-500${
