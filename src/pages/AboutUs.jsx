@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 const AboutUs = () => {
   return (
     <div className="w-screen flex flex-col">
-      <div className="flex w-full h-full py-40 lg:px-36 px-4 relative text-black bg-[#B4BFB7]">
+      <div className="flex w-full lg:h-screen lg:pb-0 pb-40 pt-40 lg:px-36 px-4 relative text-black bg-[#B4BFB7]">
         <div className="flex flex-col justify-start items-start w-full h-full space-y-8 z-10">
           <h2 className="text-5xl font-bold border-l-4 pl-4 border-[#005C7C]">
             關於我們

@@ -26,6 +26,7 @@ const NavBar = ({ children }) => {
               ALl-LINK
             </button>
           </div>
+          {/* navbar items */}
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal">
               <NavBtn
@@ -104,6 +105,7 @@ const NavBar = ({ children }) => {
               />
             </ul>
           </div>
+          {/* sidebar hamburger btn */}
           <div className="flex-none lg:hidden">
             <label htmlFor="drawer1" className="btn btn-square btn-ghost">
               <svg
@@ -122,8 +124,10 @@ const NavBar = ({ children }) => {
             </label>
           </div>
         </div>
+        {/* page content */}
         {children}
       </div>
+      {/* sidebar */}
       <div className="drawer-side">
         <label htmlFor="drawer1" className="drawer-overlay"></label>
         <ul className="menu p-4 md:w-80 w-60 bg-[#28302A]">
@@ -221,7 +225,7 @@ const NavBtn = ({
         <div className="dropdown dropdown-hover dropdown-bottom active:bg-transparent rounded-lg">
           <label
             tabIndex={0}
-            className={`cursor-pointer rounded-lg hover:text-teal-500${
+            className={`w-full h-full cursor-pointer rounded-lg hover:text-teal-500 ${
               nav == onSelectedPage
                 ? "border-teal-500 rounded-none border-b-4"
                 : ""
@@ -229,7 +233,6 @@ const NavBtn = ({
             onClick={() => {
               navigate(nav);
               setOnSelectedPage(nav);
-              console.log(nav);
             }}
           >
             {name}
@@ -246,10 +249,9 @@ const NavBtn = ({
                   onClick={() => {
                     navigate(subpage.url);
                     setOnSelectedPage(nav);
-                    console.log(subpage.url);
                   }}
                 >
-                  <a className="active:bg-teal-500 hover:bg-[#28302A]">
+                  <a className="active:bg-teal-500 hover:bg-[#28302A] w-full">
                     {subpage.name}
                   </a>
                 </li>

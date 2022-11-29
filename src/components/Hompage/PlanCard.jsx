@@ -23,7 +23,7 @@ const PlanCard = ({ title, description, small, large, setDemo }) => {
             <label
               htmlFor="planModal"
               className="btn btn-outline border-teal-500 text-white hover:border-teal-500 hover:bg-teal-500"
-              onClick={setDemo(large)}
+              onClick={() => setDemo(large)}
             >
               Show Detail
             </label>
